@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       
+
+    </style>
+    <script>
+        function CheckNumber(){
+            let task= document.getElementById('num1').value;
+            let result = document.getElementById('result');
+            task=Number(task);
+            let dayname = " ";
+
+            switch(task){
+                case 1:
+                     dayname = "monday";
+                     alert("monday")
+                    break;
+                case 2:
+                  dayname = "tuesday";
+                 
+                   alert("tuesday")
+                    break; 
+                 case 3:
+                   dayname = "wensday";
+                    alert("wensday")
+                    break;   
+                      case 4:
+                   dayname = "thursday";
+                    alert("thursday")
+                    break;   
+                      case 5:
+                   dayname = "friday";
+                    alert("friday")
+                    break;   
+                      case 6:
+                   dayname = "staurday";
+                    alert("staurday")
+                    break;   
+                      case 7:
+                   dayname = "sunday";
+                    alert("sunday")
+                    break;   
+                    default:
+                        alert('wrong choice');  
+break;
+   
+            }
+            document.getElementById('num1').value="";
+           document.getElementById("result").innerHTML=dayname
+        }
+    </script>
+    
+</head>
+<body>
+    <div class="box1" id="box"></div>
+    <form method="post">
+        <p>
+            press 1 mon<br>
+            press 2 tus <br>
+            press 3 wen <br>
+             press 4 thur<br>
+            press 5 fri <br>
+            press 6 sta <br>
+            press 7 sun
+        </p>
+        <fieldset>
+            <legend>
+                javascript arithmethic opretor
+            </legend>
+            <label for="">enter the number:</label>
+            <input type="text" id="num1"  required><br><br>
+
+           
+            
+            <input type="button" value="Click" onclick="CheckNumber()" required>
+       <p id="result"></p>
+        </fieldset>
+    </form>
+</body>
+</html>

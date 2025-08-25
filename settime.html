@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            height: 200px;
+            width: 200px;
+            background-color: hotpink;
+            
+
+        }
+        #box1{
+            height: 50px;
+            width: 200px;
+            background-color:aqua;
+            margin-bottom: 30px;
+
+        }
+
+    </style>
+</head>
+<body>
+    <div id="box"></div>
+    <div id="box1"></div>
+    
+</body>
+<script>
+    function gendiv(){
+        let div = document.createElement('div');
+        div.setAttribute('class','box');
+        document.body.appendChild(div);
+
+    }
+    setTimeout(gendiv,5000);
+
+  function createClock() {
+    setInterval(() =>{
+    let todate = new Date();
+    let date = todate.getDate();
+    let month = todate.getMonth() + 1;
+    let year = todate.getFullYear();
+    let hours = todate.getHours();
+    let mini = todate.getMinutes();
+    let sec = todate.getSeconds();
+    let cdate = `${date} ${month} ${year} ${hours}:${mini}:${sec}`;
+    console.log(cdate);
+
+    document.getElementById('box1').innerHTML=cdate;
+    },1000);
+}
+
+createClock();
+
+</script>
+</html>
